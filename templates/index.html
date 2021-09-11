@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe&Wifi API</title>
+</head>
+<body>
+	<h1>Welcome to the Cafe & Wifi API</h1>
+	<a class="button" href='{{url_for("random_cafe")}}'>random</a><br>
+	<a class="button" href='{{url_for("get_all_cafes")}}'>all</a><br>
+	<form action='{{url_for("find_cafe")}}' method='POST'>
+		<input name='location' type ='text'>
+		<button type='submit'>Cafe location</button>
+	</form>
+</body>
+</html>
